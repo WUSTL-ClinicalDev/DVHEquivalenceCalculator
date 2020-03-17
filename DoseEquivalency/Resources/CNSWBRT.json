@@ -1,0 +1,1 @@
+{"Description":"CNS_WBRT","DoseConstraints":[{"StructureId":"BODY","Type":"MAX","LevelDefinition":0.0,"ConstraintUnits":"NA","ResultUnits":"%","EvalCriteria":"<","Goal":115.0,"VariationAcceptable":115.0,"Priority":1,"Note":""}]}
