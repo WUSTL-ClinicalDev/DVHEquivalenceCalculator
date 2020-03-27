@@ -1,4 +1,5 @@
 ﻿using DoseEquivalency.Events;
+using DoseMetrics.ViewModels;
 using Prism.Events;
 using Prism.Mvvm;
 using System;
@@ -26,12 +27,16 @@ namespace DoseEquivalency.ViewModels
             EQD2DVHViewModel eqd2DVHViewModel,
             BEDDVHViewModel bedDVHViewModel,
             DVHViewModel dvhViewModel,
+            DoseMetricSelectionViewModel doseMetricSelectionViewModel,
+            DoseMetricViewModel doseMetricViewModel,
             IEventAggregator eventAggregator)
         {
             StructureSelectionViewModel = structureSelectionViewModel;
             EQD2DVHViewModel = eqd2DVHViewModel;
             BEDDVHViewModel = bedDVHViewModel;
             DVHViewModel = dvhViewModel;
+            DoseMetricSelectionViewModel = doseMetricSelectionViewModel;
+            DoseMetricViewModel = doseMetricViewModel;
             _eventAggregator = eventAggregator;
             //NumberOfFractions = 30;
         }
@@ -40,6 +45,8 @@ namespace DoseEquivalency.ViewModels
         public EQD2DVHViewModel EQD2DVHViewModel { get; }
         public BEDDVHViewModel BEDDVHViewModel { get; }
         public DVHViewModel DVHViewModel { get; }
+        public DoseMetricSelectionViewModel DoseMetricSelectionViewModel { get; }
+        public DoseMetricViewModel DoseMetricViewModel { get; }
 
         private IEventAggregator _eventAggregator;
     }

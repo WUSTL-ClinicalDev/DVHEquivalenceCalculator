@@ -1,1 +1,0 @@
-{"Description":"TBI","DoseConstraints":[{"StructureId":"BODY","Type":"MAX","LevelDefinition":0.0,"ConstraintUnits":"NA","ResultUnits":"%","EvalCriteria":"<","Goal":200.0,"VariationAcceptable":200.0,"Priority":1,"Note":""}]}

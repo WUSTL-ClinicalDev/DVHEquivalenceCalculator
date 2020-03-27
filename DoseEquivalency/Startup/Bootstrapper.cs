@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using DoseEquivalency.ViewModels;
 using DoseEquivalency.Views;
+using DoseMetrics.ViewModels;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace DoseEquivalency.Startup
             container.RegisterType<EQD2DVHViewModel>().AsSelf();
             container.RegisterType<BEDDVHViewModel>().AsSelf();
             container.RegisterType<DVHViewModel>().AsSelf();
+            container.RegisterType<DoseMetricSelectionViewModel>().AsSelf();
+            container.RegisterType<DoseMetricViewModel>().AsSelf();
             
             container.RegisterInstance(patient);
             container.RegisterInstance(course);

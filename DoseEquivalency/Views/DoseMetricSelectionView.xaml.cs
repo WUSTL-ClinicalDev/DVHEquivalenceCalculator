@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DoseMetrics.Views
 {
     /// <summary>
-    /// Interaction logic for DoseMetricView.xaml
+    /// Interaction logic for DoseMetricSelectionView.xaml
     /// </summary>
-    public partial class DoseMetricView : UserControl
+    public partial class DoseMetricSelectionView : UserControl
     {
-        public DoseMetricView()
+        public DoseMetricSelectionView()
         {
             InitializeComponent();
         }

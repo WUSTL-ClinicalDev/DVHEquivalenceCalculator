@@ -1,1 +1,0 @@
-{"Description":"CTC - WholeBrain","DoseConstraints":[{"StructureId":"BODY","Type":"MAX","LevelDefinition":0.0,"ConstraintUnits":"NA","ResultUnits":"%","EvalCriteria":"<","Goal":110.0,"VariationAcceptable":110.0,"Priority":1,"Note":""}]}

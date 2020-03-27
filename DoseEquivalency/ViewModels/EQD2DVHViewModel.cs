@@ -25,7 +25,6 @@ namespace DoseEquivalency.ViewModels
         {
             _plan = plan;
             _eventAggregator = eventAggregator;
-            _eventAggregator.GetEvent<UpdateNumberOfFractionsEvent>().Subscribe(OnUpdateFx);
             EQDPlotModel = new PlotModel
             {
                 Title = "EQD2 DVH"

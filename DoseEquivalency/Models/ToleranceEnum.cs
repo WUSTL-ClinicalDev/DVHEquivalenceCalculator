@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DoseEquivalency.Models
 {
-    public class TemplateModel
+    public enum ToleranceEnum
     {
-        public string TemplateName { get; set; }
-        public string FilePath { get; set; }
+        None,
+        Pass,
+        Fail
     }
 }

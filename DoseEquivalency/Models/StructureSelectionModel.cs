@@ -36,7 +36,14 @@ namespace DoseEquivalency.Models
 		public double ABRatio
 		{
 			get { return abRatio; }
-			set { SetProperty(ref abRatio, value); }
+			set { 
+				SetProperty(ref abRatio, value);
+				if (ABRatio!=0.0)
+				{
+					_eventAggregator.GetEvent<RemoveStructureEvent>().Publish(this);
+					_eventAggregator.GetEvent<AddStructureEvent>().Publish(this);
+				}
+			}
 		}
 		public StructureSelectionModel(IEventAggregator eventAggregator)
 		{

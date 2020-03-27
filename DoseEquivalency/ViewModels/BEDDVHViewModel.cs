@@ -25,7 +25,6 @@ namespace DoseEquivalency.ViewModels
         {
             _plan = plan;
             _eventAggregator = eventAggregator;
-            _eventAggregator.GetEvent<UpdateNumberOfFractionsEvent>().Subscribe(OnUpdateFx);
             BEDPlotModel = new PlotModel
             {
                 Title = "BED DVH"

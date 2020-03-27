@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoseEquivalency.Views"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:dosemetrics="clr-namespace:DoseMetrics.Views"
         mc:Ignorable="d"
-        Title="Dose Equivalence Calculator" Height="650" Width="800" Background="BurlyWood">
+        Title="Dose Equivalence Calculator" Height="650" Width="1000" Background="BurlyWood">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -30,6 +31,12 @@
             </TabItem>
             <TabItem Header="BED DVH" BorderBrush="GreenYellow" BorderThickness="0,0,0,10">
                 <local:BED_DVHView DataContext="{Binding BEDDVHViewModel}"/>
+            </TabItem>
+            <TabItem Header="Dose Metric" BorderBrush="GreenYellow" BorderThickness="0,0,0,10">
+                <StackPanel>
+                    <dosemetrics:DoseMetricSelectionView DataContext="{Binding DoseMetricSelectionViewModel}"/>
+                    <dosemetrics:DoseMetricView DataContext="{Binding DoseMetricViewModel}"/>
+                </StackPanel>
             </TabItem>
         </TabControl>
     </Grid>

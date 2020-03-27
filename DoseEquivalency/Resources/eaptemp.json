@@ -1,1 +1,0 @@
-{"Description":"eap temp","DoseConstraints":[{"StructureId":"Esophagus","Type":"MAX","LevelDefinition":0.0,"ConstraintUnits":"NA","ResultUnits":"cGy","EvalCriteria":"<","Goal":2600.0,"VariationAcceptable":2600.0,"Priority":1,"Note":""}]}

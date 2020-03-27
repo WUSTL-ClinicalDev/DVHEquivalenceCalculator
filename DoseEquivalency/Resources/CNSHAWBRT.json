@@ -1,1 +1,0 @@
-{"Description":"CNS_HAWBRT","DoseConstraints":[{"StructureId":"BODY","Type":"MAX","LevelDefinition":0.0,"ConstraintUnits":"NA","ResultUnits":"%","EvalCriteria":"<","Goal":120.0,"VariationAcceptable":120.0,"Priority":1,"Note":""}]}
