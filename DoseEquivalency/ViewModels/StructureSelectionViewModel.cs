@@ -13,7 +13,7 @@ namespace DoseEquivalency.ViewModels
 {
     public class StructureSelectionViewModel:BindableBase
     {
-        private PlanSetup _plan;
+        public PlanSetup _plan;
         private IEventAggregator _eventAggregator;
 
         public ObservableCollection<StructureSelectionModel> SelectionStructures { get; private set; }
@@ -27,6 +27,7 @@ namespace DoseEquivalency.ViewModels
 
         private void FillStructures()
         {
+            SelectionStructures.Clear();
             foreach(var s in _plan.StructureSet.Structures.Where(x=>x.DicomType!="MARKER" && x.DicomType != "SUPPORT"))
             {
                 SelectionStructures.Add(new StructureSelectionModel(_eventAggregator)

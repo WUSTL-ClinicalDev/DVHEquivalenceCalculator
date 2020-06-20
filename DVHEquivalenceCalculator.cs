@@ -23,8 +23,16 @@ namespace VMS.TPS
             // TODO : Add here your code that is called when the script is launched from Portal Dosimetry
             try
             {
+				if(context.PlanSetup!=null)
+				{
+					
                 Process.Start(AppExePath(), String.Format("\"{0};{1};{2}\"",
                     context.Patient.Id,context.Course.Id,context.PlanSetup.Id));
+				}
+				else{
+					Process.Start(AppExePath(), String.Format("\"{0};{1}\"",
+                    context.Patient.Id,context.Course.Id,context.PlanSetupId));
+				}
             }
             catch (Exception)
             {

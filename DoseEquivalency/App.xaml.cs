@@ -31,7 +31,10 @@ namespace DoseEquivalency
                 _esapiApp = VMS.TPS.Common.Model.API.Application.CreateApplication();
                 _patient = _esapiApp.OpenPatientById(e.Args.First().Split(';').First().Trim('\"'));
                 _course = _patient.Courses.FirstOrDefault(x => x.Id == e.Args.First().Split(';').ElementAt(1));
-                _plan = _course.PlanSetups.FirstOrDefault(x => x.Id == e.Args.First().Split(';').Last());
+                if (e.Args.FirstOrDefault().Split(';').Count() > 2)
+                {
+                    _plan = _course.PlanSetups.FirstOrDefault(x => x.Id == e.Args.First().Split(';').Last());
+                }
              }
             catch
             {

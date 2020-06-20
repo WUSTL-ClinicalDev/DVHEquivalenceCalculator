@@ -76,6 +76,7 @@ namespace DoseEquivalency.ViewModels
             foreach(var dvh_point in dvh.CurveData)
             {
                 var dose_value = dvh_point.DoseValue.Dose;
+                //how to determine the dose per fraction of a plan sum.
                 var dperfx = dose_value / (double)_plan.NumberOfFractions;
                 var eqd2 = dperfx/100.0 * (((double)ab + dperfx/100.0) / ((double)ab + 2.0));
                 series.Points.Add(new DataPoint((int)_plan.NumberOfFractions * Convert.ToDouble(eqd2), dvh_point.Volume));
