@@ -16,6 +16,7 @@ Current calculations
  "PatientId;CourseId;PlanId"
  ```
  quotes are necessary if spaces are in course ID or Plan ID.
+ Note the PatientId,etc. should be the ID of the object you're trying to open within Eclipse.
  To run from External beam planning, use the DVHEquivalenceCalculator.cs file at the root of the project. Set the path to the path of the EXE on the server.
 
 ### Prerequisites
